@@ -1,0 +1,61 @@
+  pulsesecure_psg:
+    walk:
+      - logFullPercent
+      - signedInWebUsers
+      - signedInMailUsers
+      - blockedIP
+      - productName
+      - productVersion
+      - meetingUserCount
+      - iveCpuUtil
+      - iveMemoryUtil
+      - iveConcurrentUsers
+      - clusterConcurrentUsers
+      - iveTotalHits
+      - iveFileHits
+      - iveWebHits
+      - iveAppletHits
+      - ivetermHits
+      - iveSAMHits
+      - iveNCHits
+      - meetingHits
+      - meetingCount
+      - iveSwapUtil
+      - diskFullPercent
+      - iveTemperature
+      - iveVPNTunnels
+      - iveSSLConnections
+      - esapVersion
+      - iveTotalSignedInUsers
+      - loadTable
+      - memory
+      - diskTable
+      - systemStats
+      - ifOperStatus
+      - ifInOctets
+      - ifInUcastPkts
+      - ifInDiscards
+      - ifInErrors
+      - ifOutOctets
+      - ifOutUcastPkts
+      - ifOutDiscards
+      - ifOutErrors
+      - ifOutQLen
+      - ifSpecific
+    overrides:
+      productName:
+        type: DisplayString
+      productVersion:
+        type: DisplayString
+      esapVersion:
+        type: DisplayString
+      clusterName:
+        type: DisplayString
+      ifAlias:
+        ignore: true  # Lookup metric
+      ifDescr:
+        ignore: true  # Lookup metric
+      ifName:
+        ignore: true  # Lookup metric
+      ifType:
+        type: EnumAsInfo
